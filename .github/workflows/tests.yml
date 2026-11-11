@@ -20,6 +20,9 @@ jobs:
         run: |
           make opm
 
+      - name: Check shell syntax
+        run: bash -n build/bundle-catalog.sh build/add-bundle.sh
+
       - name: Validate catalog
         run: |
           make validate-catalog
